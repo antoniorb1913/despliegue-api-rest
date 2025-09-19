@@ -8,6 +8,6 @@ public class PetController {
 
         @GetMapping
         public String hello(){
-            return "Hello Word";
+            return "Hello World";
         }
 }
