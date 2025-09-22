@@ -2,6 +2,9 @@ package com.hellin.demo.entity;
 
 import java.time.LocalDate;
 
+import jakarta.persistence.Entity;
+
+@Entity
 public class Pet {
 
         private long id;
