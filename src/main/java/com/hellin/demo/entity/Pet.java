@@ -1,8 +1,8 @@
 package com.hellin.demo.entity;
 
-import java.time.LocalDate;
-
 import jakarta.persistence.Entity;
+
+import java.time.LocalDate;
 
 @Entity
 public class Pet {
