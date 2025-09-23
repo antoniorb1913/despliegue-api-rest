@@ -17,7 +17,6 @@ public class PetController {
         this.petRepository = petRepository;
     }   
 
-
     @GetMapping ("/listado")
     public List<Pet> hello() {
         return petRepository.findAll();
