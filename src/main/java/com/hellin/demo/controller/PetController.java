@@ -10,6 +10,11 @@ import com.hellin.demo.repository.PetRepository;
 
 @RestController
 @RequestMapping("/pet")
+/**
+ * En este controlador se espone los enpoint referentes a Pets 
+ * @version 1.0
+ * @author Antonio Rodriguez
+ */
 public class PetController {
 
 
@@ -17,7 +22,12 @@ public class PetController {
 
     public PetController(PetRepository petRepository) {
         this.petRepository = petRepository;
-    }   
+    }  
+
+    /**
+     * Este method devuelve el listado de mascotas
+     * @return List<Pet> informacion de cada mascota
+     */
 
     @GetMapping ("/list")
     public List<Pet> hello() {
