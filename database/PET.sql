@@ -1,8 +1,8 @@
-create database PET;
+create database pets;
 
-use PET;
+use pets;
 
-create table PETS (
+create table pet (
     id int primary key auto_increment,
     name varchar(255),
     born date,
