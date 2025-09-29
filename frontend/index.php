@@ -32,37 +32,18 @@
                             <td><?php echo $pet['chip'] ?></td>
                             <td><?php echo $pet['category'] ?></td>
                             <td><?php echo $pet['born'] ?></td>
-                            <?php if ($pet['adopt'] === FALSE): ?>
-                                <td><button onclick="adoptPet(<?= $pet['id'] ?>)">Adoptar</button></td>
+                            <td><?php echo $pet['born'] ?></td>
+                            <td><?php if ($pet['adopt'] === FALSE): ?>
+                            <form method="post" action="http://localhost:8080/pet/adopt/<?=$pet['id']?>">
+                                <button type="submit">Adoptar</button>
                             <?php else: ?>
-                                <td><span>Adoptado</span></td>
+                                <span>Adoptado</span>
                             <?php endif; ?>
-
+                            </form>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
         </table> 
-<script>
-    // Esta función se llama cuando haces clic en "Adoptar"
-    function adoptPet(petId) {
-        // Le decimos al servidor que queremos adoptar la mascota con este ID
-        fetch('http://localhost:8080/pet/adopt/' + petId, { 
-            method: 'PUT' 
-        })
-        .then(response => {
-            if (response.ok) {
-                // Si todo va bien, recarga la página para ver el cambio
-                location.reload();
-            } else {
-                // Si hay algún problema, muestra un mensaje
-                alert('Error al adoptar la mascota');
-            }
-        })
-        .catch(error => 
-            // Si hay un error al hacer la petición, lo mostramos en la consola
-            console.error('Error:', error)
-        );
-    }
-</script>
 
     </body>
 </html>

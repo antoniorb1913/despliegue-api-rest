@@ -1,16 +1,15 @@
 package com.hellin.demo.controller;
 
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import com.hellin.demo.entity.Pet;
 import com.hellin.demo.repository.PetRepository;
+import org.springframework.web.bind.annotation.PostMapping;
+
 
 
 @RestController
@@ -40,34 +39,15 @@ public class PetController {
         
     }
 
-/**
- * @CrossOrigin --> Es una anotación (etiqueta) que da permiso a páginas web externas.
- * En este caso deja que "http://localhost:3000" pueda llamar a este método.
- * @PutMapping --> Otra anotación que indica que este método responde a peticiones HTTP tipo PUT.
- * "/adopt/{id}" --> significa que la URL va a traer un número como id (ejemplo: /adopt/3).
- */
-@CrossOrigin(origins = "http://localhost:3000")
-@PutMapping("/adopt/{id}")
+@PostMapping("/adopt/{id}")
+public Pet adopt (@PathVariable long id) {
+Pet pet = petRepository.findById(id).get();
+    pet.setAdopt(true);
+    return petRepository.save(pet);
+    
 
-// Método que recibe un id de mascota desde la URL y devuelve una respuesta HTTP
-// @PathVariable --> Le dice a Spring que el "id" que viene en la URL se guarde en esta variable
-public ResponseEntity<Pet> adoptPet(@PathVariable Long id) {
-
-    // Busca la mascota en la base de datos por id. Devuelve un Optional (puede estar vacía o no).
-    //findByid --> Llama al Optional para ver si esta o el id.
-    return petRepository.findById(id)
-
-        // .map --> Si la mascota existe, entra aquí
-        .map(pet -> {
-            // Cambia el estado de adoptado a true (adoptada) pasado por la class Pet y el setter de Adopt.
-            pet.setAdopt(true);
-
-            // Guarda los cambios en la base de datos y devuelve la mascota actualizada con un 200 OK
-            return new ResponseEntity<>(petRepository.save(pet), HttpStatus.OK);
-        })
-        // .orElseGet --> Si la mascota NO existe, devuelve un error 404 NOT FOUND
-        .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
 }
+
 
 }
 
