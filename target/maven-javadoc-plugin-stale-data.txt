@@ -1,0 +1,100 @@
+@options
+@packages
+-classpath
+'C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/boot/spring-boot-starter-actuator/3.5.6/spring-boot-starter-actuator-3.5.6.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/boot/spring-boot-starter/3.5.6/spring-boot-starter-3.5.6.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/boot/spring-boot/3.5.6/spring-boot-3.5.6.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/3.5.6/spring-boot-autoconfigure-3.5.6.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/boot/spring-boot-starter-logging/3.5.6/spring-boot-starter-logging-3.5.6.jar;C:/Users/GIGABYTE-PC/.m2/repository/ch/qos/logback/logback-classic/1.5.18/logback-classic-1.5.18.jar;C:/Users/GIGABYTE-PC/.m2/repository/ch/qos/logback/logback-core/1.5.18/logback-core-1.5.18.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.24.3/log4j-to-slf4j-2.24.3.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/apache/logging/log4j/log4j-api/2.24.3/log4j-api-2.24.3.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/slf4j/jul-to-slf4j/2.0.17/jul-to-slf4j-2.0.17.jar;C:/Users/GIGABYTE-PC/.m2/repository/jakarta/annotation/jakarta.annotation-api/2.1.1/jakarta.annotation-api-2.1.1.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/yaml/snakeyaml/2.4/snakeyaml-2.4.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/boot/spring-boot-actuator-autoconfigure/3.5.6/spring-boot-actuator-autoconfigure-3.5.6.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/boot/spring-boot-actuator/3.5.6/spring-boot-actuator-3.5.6.jar;C:/Users/GIGABYTE-PC/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.19.2/jackson-databind-2.19.2.jar;C:/Users/GIGABYTE-PC/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.19.2/jackson-annotations-2.19.2.jar;C:/Users/GIGABYTE-PC/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.19.2/jackson-core-2.19.2.jar;C:/Users/GIGABYTE-PC/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.19.2/jackson-datatype-jsr310-2.19.2.jar;C:/Users/GIGABYTE-PC/.m2/repository/io/micrometer/micrometer-observation/1.15.4/micrometer-observation-1.15.4.jar;C:/Users/GIGABYTE-PC/.m2/repository/io/micrometer/micrometer-commons/1.15.4/micrometer-commons-1.15.4.jar;C:/Users/GIGABYTE-PC/.m2/repository/io/micrometer/micrometer-jakarta9/1.15.4/micrometer-jakarta9-1.15.4.jar;C:/Users/GIGABYTE-PC/.m2/repository/io/micrometer/micrometer-core/1.15.4/micrometer-core-1.15.4.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/boot/spring-boot-starter-web/3.5.6/spring-boot-starter-web-3.5.6.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/boot/spring-boot-starter-json/3.5.6/spring-boot-starter-json-3.5.6.jar;C:/Users/GIGABYTE-PC/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.19.2/jackson-datatype-jdk8-2.19.2.jar;C:/Users/GIGABYTE-PC/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.19.2/jackson-module-parameter-names-2.19.2.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/3.5.6/spring-boot-starter-tomcat-3.5.6.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/10.1.46/tomcat-embed-core-10.1.46.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/10.1.46/tomcat-embed-el-10.1.46.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/10.1.46/tomcat-embed-websocket-10.1.46.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/spring-web/6.2.11/spring-web-6.2.11.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/spring-beans/6.2.11/spring-beans-6.2.11.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/spring-webmvc/6.2.11/spring-webmvc-6.2.11.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/spring-aop/6.2.11/spring-aop-6.2.11.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/spring-context/6.2.11/spring-context-6.2.11.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/spring-expression/6.2.11/spring-expression-6.2.11.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/spring-core/6.2.11/spring-core-6.2.11.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/spring-jcl/6.2.11/spring-jcl-6.2.11.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/3.5.6/spring-boot-starter-data-jpa-3.5.6.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/3.5.6/spring-boot-starter-jdbc-3.5.6.jar;C:/Users/GIGABYTE-PC/.m2/repository/com/zaxxer/HikariCP/6.3.3/HikariCP-6.3.3.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/spring-jdbc/6.2.11/spring-jdbc-6.2.11.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/hibernate/orm/hibernate-core/6.6.29.Final/hibernate-core-6.6.29.Final.jar;C:/Users/GIGABYTE-PC/.m2/repository/jakarta/persistence/jakarta.persistence-api/3.1.0/jakarta.persistence-api-3.1.0.jar;C:/Users/GIGABYTE-PC/.m2/repository/jakarta/transaction/jakarta.transaction-api/2.0.1/jakarta.transaction-api-2.0.1.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/antlr/antlr4-runtime/4.13.0/antlr4-runtime-4.13.0.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/data/spring-data-jpa/3.5.4/spring-data-jpa-3.5.4.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/data/spring-data-commons/3.5.4/spring-data-commons-3.5.4.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/spring-orm/6.2.11/spring-orm-6.2.11.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/spring-tx/6.2.11/spring-tx-6.2.11.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/springframework/spring-aspects/6.2.11/spring-aspects-6.2.11.jar;C:/Users/GIGABYTE-PC/.m2/repository/org/aspectj/aspectjweaver/1.9.24/aspectjweaver-1.9.24.jar;C:/Users/GIGABYTE-PC/.m2/repository/com/mysql/mysql-connector-j/9.4.0/mysql-connector-j-9.4.0.jar'
+-encoding
+'UTF-8'
+-protected
+--release
+17
+-sourcepath
+'C:/Users/GIGABYTE-PC/Desktop/2DAW/Despliegue_de_aplicaciones/despliegue-api-rest/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2025. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/GIGABYTE-PC/Desktop/2DAW/Despliegue_de_aplicaciones/despliegue-api-rest/doc/apidocs'
+-docencoding
+'UTF-8'
+-Xdoclint:none
+-doctitle
+'pets 0.0.1-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'pets 0.0.1-SNAPSHOT API'
+com.hellin.demo.controller
+com.hellin.demo.entity
+com.hellin.demo
+com.hellin.demo.repository
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\boot\spring-boot-starter-actuator\3.5.6\spring-boot-starter-actuator-3.5.6.jar = 1758584299769
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\boot\spring-boot-starter\3.5.6\spring-boot-starter-3.5.6.jar = 1758573195559
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\boot\spring-boot\3.5.6\spring-boot-3.5.6.jar = 1758573195630
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.5.6\spring-boot-autoconfigure-3.5.6.jar = 1758573195595
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.5.6\spring-boot-starter-logging-3.5.6.jar = 1758573195526
+C:\Users\GIGABYTE-PC\.m2\repository\ch\qos\logback\logback-classic\1.5.18\logback-classic-1.5.18.jar = 1758573195557
+C:\Users\GIGABYTE-PC\.m2\repository\ch\qos\logback\logback-core\1.5.18\logback-core-1.5.18.jar = 1758573195617
+C:\Users\GIGABYTE-PC\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.24.3\log4j-to-slf4j-2.24.3.jar = 1758573195913
+C:\Users\GIGABYTE-PC\.m2\repository\org\apache\logging\log4j\log4j-api\2.24.3\log4j-api-2.24.3.jar = 1758573195622
+C:\Users\GIGABYTE-PC\.m2\repository\org\slf4j\jul-to-slf4j\2.0.17\jul-to-slf4j-2.0.17.jar = 1758573195666
+C:\Users\GIGABYTE-PC\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar = 1758573196037
+C:\Users\GIGABYTE-PC\.m2\repository\org\yaml\snakeyaml\2.4\snakeyaml-2.4.jar = 1758573195732
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\boot\spring-boot-actuator-autoconfigure\3.5.6\spring-boot-actuator-autoconfigure-3.5.6.jar = 1758584300137
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\boot\spring-boot-actuator\3.5.6\spring-boot-actuator-3.5.6.jar = 1758584300124
+C:\Users\GIGABYTE-PC\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.19.2\jackson-databind-2.19.2.jar = 1758573195826
+C:\Users\GIGABYTE-PC\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.19.2\jackson-annotations-2.19.2.jar = 1758573195748
+C:\Users\GIGABYTE-PC\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.19.2\jackson-core-2.19.2.jar = 1758573195829
+C:\Users\GIGABYTE-PC\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.19.2\jackson-datatype-jsr310-2.19.2.jar = 1758573195907
+C:\Users\GIGABYTE-PC\.m2\repository\io\micrometer\micrometer-observation\1.15.4\micrometer-observation-1.15.4.jar = 1758573196175
+C:\Users\GIGABYTE-PC\.m2\repository\io\micrometer\micrometer-commons\1.15.4\micrometer-commons-1.15.4.jar = 1758573197129
+C:\Users\GIGABYTE-PC\.m2\repository\io\micrometer\micrometer-jakarta9\1.15.4\micrometer-jakarta9-1.15.4.jar = 1758584300684
+C:\Users\GIGABYTE-PC\.m2\repository\io\micrometer\micrometer-core\1.15.4\micrometer-core-1.15.4.jar = 1758584300175
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.5.6\spring-boot-starter-web-3.5.6.jar = 1758573195462
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.5.6\spring-boot-starter-json-3.5.6.jar = 1758573195697
+C:\Users\GIGABYTE-PC\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.19.2\jackson-datatype-jdk8-2.19.2.jar = 1758573196483
+C:\Users\GIGABYTE-PC\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.19.2\jackson-module-parameter-names-2.19.2.jar = 1758573196192
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.5.6\spring-boot-starter-tomcat-3.5.6.jar = 1758573195962
+C:\Users\GIGABYTE-PC\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.46\tomcat-embed-core-10.1.46.jar = 1758573196126
+C:\Users\GIGABYTE-PC\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.46\tomcat-embed-el-10.1.46.jar = 1758573196048
+C:\Users\GIGABYTE-PC\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.46\tomcat-embed-websocket-10.1.46.jar = 1758573196120
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\spring-web\6.2.11\spring-web-6.2.11.jar = 1758573196214
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\spring-beans\6.2.11\spring-beans-6.2.11.jar = 1758573196254
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\spring-webmvc\6.2.11\spring-webmvc-6.2.11.jar = 1758573196349
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\spring-aop\6.2.11\spring-aop-6.2.11.jar = 1758573196284
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\spring-context\6.2.11\spring-context-6.2.11.jar = 1758573196377
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\spring-expression\6.2.11\spring-expression-6.2.11.jar = 1758573196359
+C:\Users\GIGABYTE-PC\.m2\repository\org\slf4j\slf4j-api\2.0.17\slf4j-api-2.0.17.jar = 1758573196491
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\spring-core\6.2.11\spring-core-6.2.11.jar = 1758573197366
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\spring-jcl\6.2.11\spring-jcl-6.2.11.jar = 1758573197787
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.5.6\spring-boot-starter-data-jpa-3.5.6.jar = 1758573197496
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.5.6\spring-boot-starter-jdbc-3.5.6.jar = 1758573197555
+C:\Users\GIGABYTE-PC\.m2\repository\com\zaxxer\HikariCP\6.3.3\HikariCP-6.3.3.jar = 1758573197584
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\spring-jdbc\6.2.11\spring-jdbc-6.2.11.jar = 1758573197648
+C:\Users\GIGABYTE-PC\.m2\repository\org\hibernate\orm\hibernate-core\6.6.29.Final\hibernate-core-6.6.29.Final.jar = 1758573198113
+C:\Users\GIGABYTE-PC\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar = 1758573197668
+C:\Users\GIGABYTE-PC\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar = 1758573198135
+C:\Users\GIGABYTE-PC\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar = 1758573198172
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\data\spring-data-jpa\3.5.4\spring-data-jpa-3.5.4.jar = 1758573198314
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\data\spring-data-commons\3.5.4\spring-data-commons-3.5.4.jar = 1758573198270
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\spring-orm\6.2.11\spring-orm-6.2.11.jar = 1758573198295
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\spring-tx\6.2.11\spring-tx-6.2.11.jar = 1758573198330
+C:\Users\GIGABYTE-PC\.m2\repository\org\springframework\spring-aspects\6.2.11\spring-aspects-6.2.11.jar = 1758573199203
+C:\Users\GIGABYTE-PC\.m2\repository\org\aspectj\aspectjweaver\1.9.24\aspectjweaver-1.9.24.jar = 1758573198482
+C:\Users\GIGABYTE-PC\.m2\repository\com\mysql\mysql-connector-j\9.4.0\mysql-connector-j-9.4.0.jar = 1758651877044
+C:\Users\GIGABYTE-PC\Desktop\2DAW\Despliegue_de_aplicaciones\despliegue-api-rest\src\main\java = 1758815485935
+C:\Users\GIGABYTE-PC\Desktop\2DAW\Despliegue_de_aplicaciones\despliegue-api-rest\doc\apidocs\allclasses-index.html = 1759144675904
+C:\Users\GIGABYTE-PC\Desktop\2DAW\Despliegue_de_aplicaciones\despliegue-api-rest\doc\apidocs\allpackages-index.html = 1759144675906
+C:\Users\GIGABYTE-PC\Desktop\2DAW\Despliegue_de_aplicaciones\despliegue-api-rest\doc\apidocs\element-list = 1759144675815
+C:\Users\GIGABYTE-PC\Desktop\2DAW\Despliegue_de_aplicaciones\despliegue-api-rest\doc\apidocs\help-doc.html = 1759144675926
+C:\Users\GIGABYTE-PC\Desktop\2DAW\Despliegue_de_aplicaciones\despliegue-api-rest\doc\apidocs\index-all.html = 1759144675919
+C:\Users\GIGABYTE-PC\Desktop\2DAW\Despliegue_de_aplicaciones\despliegue-api-rest\doc\apidocs\index.html = 1759144675894
+C:\Users\GIGABYTE-PC\Desktop\2DAW\Despliegue_de_aplicaciones\despliegue-api-rest\doc\apidocs\member-search-index.js = 1759144675909
+C:\Users\GIGABYTE-PC\Desktop\2DAW\Despliegue_de_aplicaciones\despliegue-api-rest\doc\apidocs\module-search-index.js = 1759144675907
+C:\Users\GIGABYTE-PC\Desktop\2DAW\Despliegue_de_aplicaciones\despliegue-api-rest\doc\apidocs\overview-summary.html = 1759144675923
+C:\Users\GIGABYTE-PC\Desktop\2DAW\Despliegue_de_aplicaciones\despliegue-api-rest\doc\apidocs\overview-tree.html = 1759144675889
+C:\Users\GIGABYTE-PC\Desktop\2DAW\Despliegue_de_aplicaciones\despliegue-api-rest\doc\apidocs\package-search-index.js = 1759144675908
+C:\Users\GIGABYTE-PC\Desktop\2DAW\Despliegue_de_aplicaciones\despliegue-api-rest\doc\apidocs\search.html = 1759144675921
+C:\Users\GIGABYTE-PC\Desktop\2DAW\Despliegue_de_aplicaciones\despliegue-api-rest\doc\apidocs\tag-search-index.js = 1759144675910
+C:\Users\GIGABYTE-PC\Desktop\2DAW\Despliegue_de_aplicaciones\despliegue-api-rest\doc\apidocs\type-search-index.js = 1759144675909

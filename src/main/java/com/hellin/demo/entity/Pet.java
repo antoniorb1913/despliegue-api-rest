@@ -17,7 +17,15 @@ public class Pet {
         private LocalDate born;
         private String chip;
         private String category;
+        private boolean adopt;
         
+        
+        public boolean isAdopt() {
+            return adopt;
+        }
+        public void setAdopt(boolean adopt) {
+            this.adopt = adopt;
+        }
         public long getId() {
             return id;
         }
