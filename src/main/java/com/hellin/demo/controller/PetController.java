@@ -65,7 +65,6 @@ public ResponseEntity<Pet> adoptPet(@PathVariable Long id) {
             // Guarda los cambios en la base de datos y devuelve la mascota actualizada con un 200 OK
             return new ResponseEntity<>(petRepository.save(pet), HttpStatus.OK);
         })
-
         // .orElseGet --> Si la mascota NO existe, devuelve un error 404 NOT FOUND
         .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
 }
