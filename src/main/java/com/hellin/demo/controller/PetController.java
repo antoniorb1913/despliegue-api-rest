@@ -54,11 +54,12 @@ public class PetController {
 public ResponseEntity<Pet> adoptPet(@PathVariable Long id) {
 
     // Busca la mascota en la base de datos por id. Devuelve un Optional (puede estar vacía o no).
+    //findByid --> Llama al Optional para ver si esta o el id.
     return petRepository.findById(id)
 
         // .map --> Si la mascota existe, entra aquí
         .map(pet -> {
-            // Cambia el estado de adoptado a true (adoptada)
+            // Cambia el estado de adoptado a true (adoptada) pasado por la class Pet y el setter de Adopt.
             pet.setAdopt(true);
 
             // Guarda los cambios en la base de datos y devuelve la mascota actualizada con un 200 OK
