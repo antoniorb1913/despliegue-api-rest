@@ -34,16 +34,15 @@
                             <td><?php echo $pet['born'] ?></td>
                             <td><?php echo $pet['born'] ?></td>
                             <td><?php if ($pet['adopt'] === FALSE): ?>
-                            <form method="post" action="http://localhost:8080/pet/adopt/<?=$pet['id']?>">
-                                <button type="submit">Adoptar</button>
-                            <?php else: ?>
-                                <span>Adoptado</span>
-                            <?php endif; ?>
-                            </form>
+                                <form method="post" action="http://localhost:8080/pet/adopt/<?=$pet['id']?>">
+                                    <button type="submit">Adoptar</button>
+                                <?php else: ?>
+                                    <span>Adoptado</span>
+                                <?php endif; ?>
+                                </form>
                             </td>
                         </tr>
                     <?php endforeach; ?>
         </table> 
-
     </body>
 </html>
