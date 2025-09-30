@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.view.RedirectView;
 import java.util.List;
 import com.hellin.demo.entity.Pet;
 import com.hellin.demo.repository.PetRepository;
@@ -40,21 +39,15 @@ public class PetController {
         
     }
 
-@PostMapping("/adopt/{id}")
-// RedirectView --> redirigir al navegador a otra URL desde un controlador.
-public RedirectView adopt(@PathVariable long id) {
-    Pet pet = petRepository.findById(id).get();
-    
-    if (pet == null) {
-        throw new RuntimeException("Pet No existe");
-}
-    pet.setAdopt(true);
-    petRepository.save(pet);
-    
-    // Redireccion al listado.
-    return new RedirectView("http://localhost:3000/frontend/index.php");
-}
+    @PostMapping("/adopt/{id}")
+    // RedirectView --> redirigir al navegador a otra URL desde un controlador.
+    public Pet adopt(@PathVariable long id) {
+        Pet pet = petRepository.findById(id).get();
 
+        pet.setAdopt(true);
+        return petRepository.save(pet);
+        
+    }
 
 }
 
