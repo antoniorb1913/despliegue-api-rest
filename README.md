@@ -1,34 +1,58 @@
 # 🐾 Protectora de Mascotas API REST
 
-Bienvenido a la API para la gestión de mascotas en una protectora.  
-Este proyecto te permitirá listar mascotas y realizar adopciones fácilmente.
+Bienvenido a la API REST de la protectora de mascotas.  
+Este proyecto está desarrollado en **Spring Boot** y utiliza **PostgreSQL (NeonDB)** como base de datos.
 
 ---
 
 ## 🚀 Características
 
-- **Listar mascotas:** Consulta todas las mascotas disponibles para adopción.
+- **Listar mascotas:** Consulta todas las mascotas registradas.
 - **Adoptar mascota:** Marca una mascota como adoptada.
 
 ---
 
-## 🗄️ Base de datos
+## ⚙️ Tecnologías
 
-La API utiliza una base de datos MySQL con la siguiente estructura:
+- **Java / Spring Boot**
+- **PostgreSQL (NeonDB)**
+- **JPA / Hibernate**
+
+---
+
+## 🗄️ Estructura de la base de datos
+
+La tabla principal es `PETS` y su estructura recomendada para PostgreSQL es:
 
 ```sql
-CREATE DATABASE PET;
-
-USE PET;
-
-CREATE TABLE PETS (
-    id INT PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE pets (
+    id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     born DATE,
     category VARCHAR(255),
-    chip VARCHAR(255)
+    chip VARCHAR(255),
+    adopt BOOLEAN DEFAULT false
 );
 ```
+
+---
+
+## 📦 Configuración
+
+La conexión a la base de datos debe configurarse en el archivo `application.properties`:
+
+```properties
+spring.datasource.url=jdbc:postgresql://ep-wandering-water-ad57btsv-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb?sslmode=require&channel_binding=require
+spring.datasource.username=neondb_owner
+spring.datasource.password=npg_1DWzEr8TNjcl
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+spring.jpa.hibernate.ddl-auto=validate
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+```
+
+> ⚠️ **Nota:** No incluyas credenciales sensibles en tu repositorio público.
 
 ---
 
@@ -38,7 +62,7 @@ CREATE TABLE PETS (
 
 - **URL:** `/list`
 - **Método:** `GET`
-- **Descripción:** Obtiene todas las mascotas registradas.
+- **Descripción:** Obtiene todas las mascotas registradas en el sistema.
 - **Ejemplo de respuesta:**
   ```json
   [
@@ -74,35 +98,35 @@ CREATE TABLE PETS (
 
 ---
 
-## 🏁 Instalación
+## 🏁 Instalación y ejecución
 
 1. Clona el repositorio:
    ```bash
    git clone https://github.com/antoniorb1913/despliegue-api-rest.git
    cd despliegue-api-rest
    ```
-2. Instala dependencias:
+2. Configura el acceso a tu base de datos en `src/main/resources/application.properties`.
+3. Compila y ejecuta la aplicación:
    ```bash
-   npm install
+   ./mvnw spring-boot:run
    ```
-3. Configura la conexión a MySQL.
-4. Inicia el servidor:
+   o si usas Gradle:
    ```bash
-   npm start
+   ./gradlew bootRun
    ```
 
 ---
 
 ## 🧑‍💻 Contribuciones
 
-¿Quieres mejorar el proyecto?  
+¿Te gustaría ayudar a mejorar el proyecto?  
 Haz un fork, crea una rama y envía tu pull request.
 
 ---
 
 ## 📩 Contacto
 
-Para dudas o sugerencias, abre un issue o escribe a [antoniorb1913@gmail.com](mailto:antoniorb1913@gmail.com)
+Para dudas o sugerencias, abre un issue o escríbeme a [antoniorb1913@gmail.com](mailto:antoniorb1913@gmail.com)
 
 ---
 
