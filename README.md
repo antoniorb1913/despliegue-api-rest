@@ -1,7 +1,7 @@
 # 🐾 Protectora de Mascotas API REST
 
-Bienvenido a la API REST de la protectora de mascotas.  
-Este proyecto está desarrollado en **Spring Boot** y utiliza **PostgreSQL (NeonDB)** como base de datos.
+Bienvenido a la API REST para la gestión de mascotas en una protectora.  
+Este proyecto está desarrollado con **Spring Boot** y utiliza **PostgreSQL (NeonDB)** como base de datos.
 
 ---
 
@@ -22,24 +22,42 @@ Este proyecto está desarrollado en **Spring Boot** y utiliza **PostgreSQL (Neon
 
 ## 🗄️ Estructura de la base de datos
 
-La tabla principal es `PETS` y su estructura recomendada para PostgreSQL es:
+La entidad principal del sistema es **Pet**.  
+La tabla recomendada en PostgreSQL es:
 
 ```sql
 CREATE TABLE pets (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     born DATE,
-    category VARCHAR(255),
     chip VARCHAR(255),
+    category VARCHAR(255),
     adopt BOOLEAN DEFAULT false
 );
+```
+
+### Ejemplo de la entidad Java
+
+```java
+@Entity
+public class Pet {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    private String name;
+    private LocalDate born;
+    private String chip;
+    private String category;
+    private boolean adopt;
+    // getters y setters
+}
 ```
 
 ---
 
 ## 📦 Configuración
 
-La conexión a la base de datos debe configurarse en el archivo `application.properties`:
+La conexión a la base de datos se configura en `src/main/resources/application.properties`:
 
 ```properties
 spring.datasource.url=jdbc:postgresql://ep-wandering-water-ad57btsv-pooler.c-2.us-east-1.aws.neon.tech:5432/neondb?sslmode=require&channel_binding=require
@@ -70,8 +88,8 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
       "id": 1,
       "name": "Luna",
       "born": "2022-01-10",
-      "category": "Perro",
       "chip": "123456789",
+      "category": "Perro",
       "adopt": false
     }
   ]
@@ -90,8 +108,8 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
     "id": 1,
     "name": "Luna",
     "born": "2022-01-10",
-    "category": "Perro",
     "chip": "123456789",
+    "category": "Perro",
     "adopt": true
   }
   ```
