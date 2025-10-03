@@ -44,5 +44,17 @@
                         </tr>
                     <?php endforeach; ?>
         </table> 
+        <h2 style="text-align:center;">Añadir Mascota</h2>
+        <form method="post" action="http://localhost:8080/pet/add">
+            <label>Nombre:</label>
+            <input type="text" name="name"><br>
+            <label>Chip:</label>
+            <input type="text" name="chip"><br>
+            <label>Categoría:</label>
+            <input type="text" name="category"><br>
+            <label>Nacimiento:</label>
+            <input type="date" name="born"><br>
+            <button type="submit">Añadir Mascota</button>
+        </form>
     </body>
 </html>

@@ -1,14 +1,19 @@
 package com.hellin.demo.controller;
 
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
+
+import com.hellin.demo.dto.PetDto;
 import com.hellin.demo.entity.Pet;
 import com.hellin.demo.repository.PetRepository;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 
 
@@ -47,6 +52,11 @@ public class PetController {
         pet.setAdopt(true);
         return petRepository.save(pet);
         
+    }
+
+    @PostMapping("/add")
+    public Pet addPet(@RequestBody PetDto petDto) {
+
     }
 
 }
